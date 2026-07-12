@@ -1,0 +1,24 @@
+@mixin text-xs {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-regular);
+}
+@mixin text-sm {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+}
+@mixin text-base {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+}
+@mixin text-lg {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
+}
+@mixin text-xl {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+}
+@mixin heading-2xl {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+}
