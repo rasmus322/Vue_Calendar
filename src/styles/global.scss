@@ -9,9 +9,8 @@
 @import "@fontsource/inter/800.css";
 @import "@fontsource/inter/900.css";
 
-// variables and mixins import
+// variables import
 @import "./variables.scss";
-@import "./mixins.scss";
 
 * {
   margin: 0;
@@ -29,6 +28,11 @@ li {
 
 ul {
   padding-left: 0;
+}
+
+button {
+  background: none;
+  border: none;
 }
 
 body {

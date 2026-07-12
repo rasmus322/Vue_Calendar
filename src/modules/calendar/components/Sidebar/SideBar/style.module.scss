@@ -1,0 +1,43 @@
+.container {
+  max-width: 300px;
+  background-color: var(--bg-color-secondary);
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing);
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-2xl);
+  color: var(--text-color-inversive);
+  text-transform: capitalize;
+  & span {
+    font-weight: var(--font-weight-regular);
+    color: var(--text-color-accent);
+  }
+}
+
+.btns {
+  display: flex;
+  align-items: center;
+  & .btn {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    color: var(--text-color-inversive);
+    transition: var(--transition);
+    &:hover {
+      color: var(--text-color-accent);
+    }
+  }
+  & .btn_prev {
+    transform: rotate(180deg);
+  }
+}

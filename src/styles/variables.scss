@@ -20,6 +20,7 @@ $font-size-2xl: 30px;
 // // measurements
 $spacing: 16px;
 $border-radius: 8px;
+$transition: 0.3s;
 
 // dynamic variables
 :root {
@@ -52,4 +53,8 @@ $border-radius: 8px;
   --bg-color-accent: #ef4444;
   --bg-color-accent-secondary: #3b82f6;
   --bg-color-utils: #f4f4f5;
+  // measurements
+  --spacing: #{$spacing};
+  --border-radius: #{$border-radius};
+  --transition: #{$transition};
 }
