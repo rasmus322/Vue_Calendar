@@ -1,13 +1,24 @@
 <script setup lang="ts">
+import { useCalendarStore } from "@/modules/calendar/store/calendarStore";
+import { isToday } from "@/modules/calendar/utils/calendarHelpers";
 import styles from "./style.module.scss";
+
+const store = useCalendarStore()
+const weekDays = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"]
 </script>
 
 <template>
-  <div :class="styles.container">
-    <h1 :class="styles.title">February <span> 2026 </span></h1>
-    <div :class="styles.btns">
-      <button :class="styles.btn"></button>
-      <button :class="styles.btn"></button>
+  <div :class="styles.miniCalendar">
+    <template v-for="day in weekDays" :key="day">
+      <h6 :class="styles.weekDay"> {{ day }} </h6>
+    </template>
+
+    <div v-for="(day, id) in store.calendarGrid" :key="id" :class="[
+      styles.dayCell,
+      !day.isCurrentMonth ? styles.inactive : '',
+      isToday(day) ? styles.isToday : ''
+    ]">
+      {{ day.day }}
     </div>
   </div>
 </template>

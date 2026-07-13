@@ -3,9 +3,7 @@ import SideBar from "./modules/calendar/components/Sidebar/SideBar/SideBar.vue";
 </script>
 
 <template>
-  <div class="">
-    <SideBar />
-  </div>
+  <SideBar />
 </template>
 
 <style scoped></style>

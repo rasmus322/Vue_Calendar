@@ -1,5 +1,6 @@
 import { ref, computed } from "vue";
 import { defineStore } from "pinia";
+import { generateCalendarGrid } from "../utils/calendarHelpers";
 
 export const useCalendarStore = defineStore("calendar", () => {
   // states
@@ -7,19 +8,18 @@ export const useCalendarStore = defineStore("calendar", () => {
   const currentMonth = ref<number>(new Date().getMonth());
 
   // computed
-  const daysInMonth = computed<number[]>(() => {
-    const daysCount = new Date(currentYear.value, currentMonth.value + 1, 0).getDate();
-
-    return Array.from({ length: daysCount }, (_, i) => i + 1);
-  });
   const currentMonthName = computed<string>(() => {
     return new Date(currentYear.value, currentMonth.value, 1).toLocaleString("ru", {
       month: "long",
     });
   });
 
+  const calendarGrid = computed(() => {
+    return generateCalendarGrid(currentYear.value, currentMonth.value);
+  });
+
   // methods
-  const nextMonth = () => {
+  const setNextMonth = () => {
     if (currentMonth.value === 11) {
       currentMonth.value = 0;
       currentYear.value++;
@@ -27,8 +27,7 @@ export const useCalendarStore = defineStore("calendar", () => {
       currentMonth.value++;
     }
   };
-
-  const prevMonth = () => {
+  const setPrevMonth = () => {
     if (currentMonth.value === 0) {
       currentMonth.value = 11;
       currentYear.value--;
@@ -40,9 +39,9 @@ export const useCalendarStore = defineStore("calendar", () => {
   return {
     currentYear,
     currentMonth,
-    daysInMonth,
     currentMonthName,
-    nextMonth,
-    prevMonth,
+    calendarGrid,
+    setNextMonth,
+    setPrevMonth,
   };
 });

@@ -1,0 +1,28 @@
+.miniCalendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.weekDay {
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-xs);
+  color: var(--text-color-secondary);
+  text-transform: uppercase;
+  text-align: center;
+  padding: 4px;
+}
+
+.dayCell {
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-xs);
+  color: var(--text-color-inversive);
+  text-align: center;
+  padding: 4px 4px 8px 4px; // это поменять
+  &.inactive {
+    color: var(--text-color-secondary);
+  }
+  &.isToday {
+    background-color: var(--bg-color-accent-secondary);
+    border-radius: var(--border-radius);
+  }
+}
