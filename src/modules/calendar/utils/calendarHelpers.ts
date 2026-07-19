@@ -58,3 +58,9 @@ export const generateCalendarGrid = (year: number, month: number): CalendarDay[]
 
   return [...prevMonthDays, ...currentMonthDays, ...nextMonthDays];
 };
+
+export const formatDateKey = (day: CalendarDay): string => {
+  const month = String(day.month + 1).padStart(2, "0");
+  const date = String(day.day).padStart(2, "0");
+  return `${day.year}-${month}-${date}`;
+};

@@ -13,7 +13,6 @@ export const useCalendarStore = defineStore("calendar", () => {
       month: "long",
     });
   });
-
   const calendarGrid = computed(() => {
     return generateCalendarGrid(currentYear.value, currentMonth.value);
   });

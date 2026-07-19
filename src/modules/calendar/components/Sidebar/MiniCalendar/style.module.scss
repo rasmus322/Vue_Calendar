@@ -1,28 +1,44 @@
 .miniCalendar {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-}
 
-.weekDay {
-  font-weight: var(--font-weight-semibold);
-  font-size: var(--font-size-xs);
-  color: var(--text-color-secondary);
-  text-transform: uppercase;
-  text-align: center;
-  padding: 4px;
-}
-
-.dayCell {
-  font-weight: var(--font-weight-semibold);
-  font-size: var(--font-size-xs);
-  color: var(--text-color-inversive);
-  text-align: center;
-  padding: 4px 4px 8px 4px; // это поменять
-  &.inactive {
+  &__weekDay {
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-xs);
     color: var(--text-color-secondary);
+    text-transform: uppercase;
+    text-align: center;
+    padding: var(--spacing-sm);
   }
-  &.isToday {
-    background-color: var(--bg-color-accent-secondary);
-    border-radius: var(--border-radius);
+
+  &__dayCell {
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-xs);
+    color: var(--text-color-inversive);
+    text-align: center;
+    padding: var(--spacing-sm); // это поменять
+    &.inactive {
+      color: var(--text-color-secondary);
+    }
+    &.isToday {
+      color: var(--text-color-accent-secondary);
+      border-radius: var(--border-radius);
+    }
+  }
+
+  &__tasksCounter {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    margin-top: 2px;
+  }
+
+  &__taskIndicator {
+    width: 4px;
+    height: 4px;
+    display: block;
+    border-radius: 50%;
   }
 }

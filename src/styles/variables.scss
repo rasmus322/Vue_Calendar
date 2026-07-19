@@ -18,7 +18,9 @@ $font-size-lg: 22px;
 $font-size-xl: 26px;
 $font-size-2xl: 30px;
 // // measurements
-$spacing: 16px;
+$spacing-sm: 4px;
+$spacing-lg: 16px;
+$gap-size: 8px;
 $border-radius: 8px;
 $transition: 0.3s;
 
@@ -54,7 +56,9 @@ $transition: 0.3s;
   --bg-color-accent-secondary: #3b82f6;
   --bg-color-utils: #f4f4f5;
   // measurements
-  --spacing: #{$spacing};
+  --spacing-sm: #{$spacing-sm};
+  --spacing-lg: #{$spacing-lg};
+  --gap-size: #{$gap-size};
   --border-radius: #{$border-radius};
   --transition: #{$transition};
 }
