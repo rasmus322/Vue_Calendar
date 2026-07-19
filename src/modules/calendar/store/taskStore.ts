@@ -1,64 +1,10 @@
 import { defineStore } from "pinia";
 import { computed, ref } from "vue";
-import { v4 as uuidv4 } from "uuid";
 import type { Task } from "../types/types";
 
 export const useTaskStore = defineStore("task", () => {
   //states
-  const tasks = ref<Task[]>([
-    {
-      id: uuidv4(),
-      name: "test task today",
-      description: "today description bla bla bla",
-      date: new Date().toLocaleDateString("en-CA"), // Сегодня
-      timeRange: { start: "08:30", end: "09:00" },
-      taskType: "regular",
-    },
-    {
-      id: uuidv4(),
-      name: "test task today",
-      description:
-        "today description bla blllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllla bla",
-      date: new Date().toLocaleDateString("en-CA"), // Сегодня
-      timeRange: { start: "08:30", end: "09:00" },
-      taskType: "important",
-    },
-    {
-      id: uuidv4(),
-      name: "test task tomorrow",
-      date: new Date(Date.now() + 86400000).toLocaleDateString("en-CA"), // Завтра
-      timeRange: { start: "10:00", end: "11:00" },
-      taskType: "withDeadLine",
-    },
-    {
-      id: uuidv4(),
-      name: "test task other",
-      date: "2026-07-25",
-      timeRange: { start: "12:00", end: "13:00" },
-      taskType: "regular",
-    },
-    {
-      id: uuidv4(),
-      name: "test task other",
-      date: "2026-07-25",
-      timeRange: { start: "12:00", end: "13:00" },
-      taskType: "regular",
-    },
-    {
-      id: uuidv4(),
-      name: "test task other",
-      date: "2026-07-25",
-      timeRange: { start: "12:00", end: "13:00" },
-      taskType: "regular",
-    },
-    {
-      id: uuidv4(),
-      name: "test task other",
-      date: "2026-07-25",
-      timeRange: { start: "12:00", end: "13:00" },
-      taskType: "regular",
-    },
-  ]);
+  const tasks = ref<Task[]>([]);
 
   // computed
   const today = computed(() => {
