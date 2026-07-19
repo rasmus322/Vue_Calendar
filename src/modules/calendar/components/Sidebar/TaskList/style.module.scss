@@ -1,0 +1,47 @@
+.taskList {
+  width: 100%;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  row-gap: var(--gap-size);
+  padding-bottom: var(--spacing-lg);
+  overflow-y: auto;
+
+  &__dayItem {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--gap-size);
+  }
+
+  &__dayTitle {
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-sm);
+    color: var(--text-color-secondary);
+    text-transform: uppercase;
+    & span {
+      font-weight: var(--font-weight-regular);
+      margin-left: var(--spacing-sm);
+    }
+    &.today {
+      color: var(--text-color-accent-secondary);
+    }
+  }
+  // &__emptyTasks {
+
+  // }
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--bg-color-utils);
+    border-radius: var(--border-radius);
+    &:hover {
+      background-color: var(--bg-color-primary);
+    }
+  }
+}

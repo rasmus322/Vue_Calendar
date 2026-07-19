@@ -1,0 +1,51 @@
+.sideBar {
+  max-width: 300px;
+  height: 100vh;
+  background-color: var(--bg-color-secondary);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  padding: var(--spacing-lg);
+  padding-bottom: 0;
+  overflow: hidden;
+
+  &__header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+  }
+
+  &__title {
+    display: flex;
+    align-items: baseline;
+    gap: var(--spacing-sm);
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-2xl);
+    color: var(--text-color-inversive);
+    text-transform: capitalize;
+    & span {
+      font-weight: var(--font-weight-regular);
+      color: var(--text-color-accent);
+    }
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+  }
+  &__btn {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    color: var(--text-color-inversive);
+    transition: var(--transition);
+    &:hover {
+      color: var(--text-color-accent);
+    }
+  }
+  & .btn_prev {
+    transform: rotate(180deg);
+  }
+}

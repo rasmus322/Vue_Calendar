@@ -1,0 +1,41 @@
+.task {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-left: var(--spacing-lg);
+  &__indicator {
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 2px;
+    left: 0;
+    display: block;
+    border-radius: 50%;
+  }
+  &__time {
+    display: flex;
+    align-items: center;
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-xs);
+    color: var(--text-color-secondary);
+    & span {
+      font-weight: var(--font-weight-regular);
+      margin-left: var(--spacing-sm);
+    }
+  }
+  &__name {
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-sm);
+    color: var(--text-color-inversive);
+  }
+  &__description {
+    font-weight: var(--font-weight-regular);
+    font-size: var(--font-size-xs);
+    color: var(--text-color-secondary);
+    word-break: break-word;
+    overflow-wrap: break-word;
+    padding-right: var(--spacing-sm);
+  }
+}

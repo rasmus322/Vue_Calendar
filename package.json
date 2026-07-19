@@ -8,6 +8,7 @@
     "build": "run-p type-check \"build-only {@}\" --",
     "preview": "vite preview",
     "test:unit": "vitest",
+    "test:coverage": "vitest run --coverage",
     "prepare": "cypress install",
     "test:e2e": "start-server-and-test preview http://localhost:4173 'cypress run --e2e'",
     "test:e2e:dev": "start-server-and-test 'vite dev --port 4173' http://localhost:4173 'cypress open --e2e'",
@@ -18,7 +19,9 @@
     "lint:eslint": "eslint . --fix --cache"
   },
   "dependencies": {
+    "@fontsource/inter": "^5.2.8",
     "pinia": "^3.0.4",
+    "uuid": "^14.0.1",
     "vue": "^3.5.38",
     "vue-router": "^5.1.0"
   },
@@ -27,6 +30,7 @@
     "@types/jsdom": "^28.0.3",
     "@types/node": "^24.13.2",
     "@vitejs/plugin-vue": "^6.0.7",
+    "@vitest/coverage-v8": "^4.1.10",
     "@vitest/eslint-plugin": "^1.6.20",
     "@vue/eslint-config-typescript": "^14.8.0",
     "@vue/test-utils": "^2.4.11",
@@ -40,6 +44,7 @@
     "jsdom": "^29.1.1",
     "npm-run-all2": "^9.0.2",
     "oxlint": "~1.69.0",
+    "sass": "^1.101.0",
     "start-server-and-test": "^3.0.11",
     "typescript": "~6.0.0",
     "vite": "^8.0.16",
