@@ -1,6 +1,4 @@
-import DayViewPage from "./DayView/DayViewPage.vue";
-import WeekViewPage from "./WeekView/WeekViewPage.vue";
-import MonthViewPage from "./MonthView/MonthViewPage.vue";
-import YearViewPage from "./YearView/YearViewPage.vue";
-
-export { DayViewPage, WeekViewPage, MonthViewPage, YearViewPage };
+export { default as DayViewPage } from "./day-view";
+export { default as WeekViewPage } from "./week-view";
+export { default as MonthViewPage } from "./month-view";
+export { default as YearViewPage } from "./year-view";
