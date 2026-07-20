@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { formatDisplayDate } from "@/modules/calendar/utils/taskHelper";
+import { formatDisplayDate } from "@entities/task/lib/helpers";
 
 describe("taskHelper", () => {
   describe("formatDisplayDate", () => {

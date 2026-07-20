@@ -1,8 +1,8 @@
 import { describe, it, expect } from "vitest";
 import { mount } from "@vue/test-utils";
-import TaskItem from "@/modules/calendar/components/Sidebar/TaskList/TaskItem/TaskItem.vue";
-import type { Task } from "@/modules/calendar/types/types";
-import styles from "@/modules/calendar/components/Sidebar/TaskList/TaskItem/style.module.scss";
+import { TaskItem } from "@/widgets/side-bar";
+import type { Task } from "@entities/task/types/task";
+import styles from "@widgets/side-bar/ui/TaskList/TaskItem/style.module.scss";
 
 describe("TaskItem", () => {
   const mockTask: Task = {

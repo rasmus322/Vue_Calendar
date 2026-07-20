@@ -1,9 +1,9 @@
 import { describe, it, expect } from "vitest";
 import { mount, flushPromises } from "@vue/test-utils";
 import { createPinia, setActivePinia } from "pinia";
-import MiniCalendar from "@/modules/calendar/components/Sidebar/MiniCalendar/MiniCalendar.vue";
-import { useTaskStore } from "@/modules/calendar/store/taskStore";
-import styles from "@/modules/calendar/components/Sidebar/MiniCalendar/style.module.scss";
+import { MiniCalendar } from "@/widgets/side-bar";
+import { useTaskStore } from "@entities/task/store/taskStore";
+import styles from "@widgets/side-bar/ui/MiniCalendar/style.module.scss";
 
 describe("MiniCalendar", () => {
   beforeEach(() => {

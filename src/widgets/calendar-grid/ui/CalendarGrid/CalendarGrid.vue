@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { SideBar } from './widgets/side-bar';
+import styles from "./style.module.scss"
 </script>
 
 <template>
-  <SideBar />
+  <div :class="styles"></div>
 </template>
 
 <style scoped></style>

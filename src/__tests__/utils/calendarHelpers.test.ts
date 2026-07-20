@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
-import { formatDateKey, getDaysInMonth, isToday } from "@/modules/calendar/utils/calendarHelpers";
-import type { CalendarDay } from "@/modules/calendar/types/types";
+import { formatDateKey, getDaysInMonth, isToday } from "@entities/calendar/lib/helpers";
+import type { CalendarDay } from "@entities/calendar/types/calendar";
 
 describe("calendarHelpers", () => {
   describe("getDaysInMonth", () => {

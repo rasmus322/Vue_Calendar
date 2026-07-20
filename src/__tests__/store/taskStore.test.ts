@@ -1,7 +1,7 @@
 import { createPinia, setActivePinia } from "pinia";
 import { describe, it, expect } from "vitest";
-import { useTaskStore } from "@/modules/calendar/store/taskStore";
-import type { Task } from "@/modules/calendar/types/types";
+import { useTaskStore } from "@entities/task/store/taskStore";
+import type { Task } from "@entities/task/types/task";
 
 describe("taskStore", () => {
   beforeEach(() => {
