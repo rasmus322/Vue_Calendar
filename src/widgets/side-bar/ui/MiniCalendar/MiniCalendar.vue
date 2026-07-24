@@ -1,15 +1,15 @@
 <script setup lang="ts">
 // utils
 import { TASK_TYPE_COLOR } from "../../lib/constants";
-import { useCalendarStore } from "@entities/calendar/store/calendarStore";
 import { useTaskStore } from "@entities/task/store/taskStore";
 import { formatDateKey, isToday } from "@entities/calendar/lib/helpers";
+import { useMiniCaledarStore } from "@/entities/mini-calendar/store/miniCalendarStore";
 // types
 import type { CalendarDay } from "@entities/calendar/types/calendar";
 //styles
 import styles from "./style.module.scss";
 
-const calendarStore = useCalendarStore()
+const miniCalendarStore = useMiniCaledarStore()
 const weekDays = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"]
 const { getTasksByDate } = useTaskStore()
 
@@ -28,7 +28,7 @@ const getTasksIndicatorColor = (day: CalendarDay) => {
       <h6 :class="styles.miniCalendar__weekDay"> {{ day }} </h6>
     </template>
 
-    <div v-for="(day, id) in calendarStore.calendarGrid" :key="id" :class="[
+    <div v-for="(day, id) in miniCalendarStore.grid" :key="id" :class="[
       styles.miniCalendar__dayCell,
       !day.isCurrentMonth ? styles.inactive : '',
       isToday(day) ? styles.isToday : ''

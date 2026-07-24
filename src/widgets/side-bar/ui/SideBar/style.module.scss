@@ -1,5 +1,6 @@
 .sideBar {
   max-width: 300px;
+  width: 100%;
   height: 100vh;
   background-color: var(--bg-color-secondary);
   display: flex;
@@ -12,40 +13,35 @@
   &__header {
     width: 100%;
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: space-between;
+    gap: var(--gap-size);
     flex-shrink: 0;
   }
 
   &__title {
-    display: flex;
-    align-items: baseline;
-    gap: var(--spacing-sm);
     font-weight: var(--font-weight-medium);
     font-size: var(--font-size-2xl);
     color: var(--text-color-inversive);
     text-transform: capitalize;
-    & span {
-      font-weight: var(--font-weight-regular);
-      color: var(--text-color-accent);
-    }
+    display: flex;
+    align-items: baseline;
+    gap: var(--spacing-sm);
+  }
+
+  &__title__year {
+    font-weight: var(--font-weight-regular);
+    color: var(--text-color-accent);
   }
 
   &__btns {
     display: flex;
     align-items: center;
+    flex-shrink: 0;
+    justify-self: end;
   }
-  &__btn {
-    width: 24px;
-    height: 24px;
-    cursor: pointer;
-    color: var(--text-color-inversive);
-    transition: var(--transition);
-    &:hover {
-      color: var(--text-color-accent);
-    }
-  }
-  & .btn_prev {
-    transform: rotate(180deg);
-  }
+}
+
+.flipped {
+  transform: rotate(180deg);
 }

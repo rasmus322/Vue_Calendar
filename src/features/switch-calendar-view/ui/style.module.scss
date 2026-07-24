@@ -1,0 +1,9 @@
+.viewSwitcher {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-size);
+
+  &__btn:not(:global(.active)) {
+    background: none;
+  }
+}

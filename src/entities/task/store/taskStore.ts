@@ -29,6 +29,16 @@ export const useTaskStore = defineStore("task", () => {
     return tasks.value.filter((task: Task) => task.date === date);
   };
 
+  const getTaskById = (id: string) => {
+    return tasks.value.find((task) => task.id === id) || null;
+  };
+
+  const getTasksByDateRange = (startDate: string, endDate: string) => {
+    return tasks.value.filter((task) => {
+      return task.date >= startDate && task.date <= endDate;
+    });
+  };
+
   const addTask = (task: Task) => {
     tasks.value.push(task);
   };
@@ -52,6 +62,8 @@ export const useTaskStore = defineStore("task", () => {
     getTomorrowTasks,
     getOtherTasks,
     getTasksByDate,
+    getTaskById,
+    getTasksByDateRange,
     addTask,
     removeTask,
     updateTask,

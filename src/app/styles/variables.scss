@@ -54,7 +54,8 @@ $transition: 0.3s;
   --bg-color-secondary: #18181b;
   --bg-color-accent: #ef4444;
   --bg-color-accent-secondary: #3b82f6;
-  --bg-color-utils: #f4f4f5;
+  --bg-color-utils-primary: #f4f4f5;
+  --bg-color-utils-secondary: rgba(255, 255, 255, 0.1);
   // measurements
   --spacing-sm: #{$spacing-sm};
   --spacing-lg: #{$spacing-lg};

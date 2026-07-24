@@ -1,0 +1,15 @@
+.periodSwitcher {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  .btn_prev {
+    color: #000;
+    transform: rotate(180deg);
+  }
+  .btn_today {
+    color: #000;
+  }
+  .btn_next {
+    color: #000;
+  }
+}
